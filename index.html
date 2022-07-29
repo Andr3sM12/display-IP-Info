@@ -5,6 +5,30 @@
 		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<title>Display IP</title>
+		
 	</head>
-	<body></body>
+	<link
+		rel="stylesheet"
+		href="https://unpkg.com/@picocss/pico@latest/css/pico.min.css"
+	/>
+	<body>
+		<main class="container">
+			<form id="form">
+				<label>
+					User IP
+					<input required id="input" type="text" placeholder="Type IP"/>
+					<small>Example: 180.45.130.204</small> 
+				</label>
+				<button type="submit" id="submit" >
+					Show IP info
+				</button>
+			</form>
+			<div>
+				<pre id="results">
+
+				</pre>
+			</div>
+		</main>
+	</body>
+	<script src="/js/index.js"></script>
 </html>

@@ -40,7 +40,11 @@ form.addEventListener("submit", async (event) => {
 	submit.removeAttribute("aria-busy");
 });
 
+// Show IP Client
 
+fetch("https://ipinfo.io/json?token=ca07e0f13ded9e")
+	.then((response) => response.json())
+	.then((jsonResponse) => console.log(jsonResponse.ip, jsonResponse.country))
+	;
 
-
-
+	

@@ -1,5 +1,3 @@
-
-
 const options = {
 	method: "GET",
 	headers: {
@@ -37,15 +35,10 @@ form.addEventListener("submit", async (event) => {
 	if (ipInfo) {
 		results.innerHTML = JSON.stringify(ipInfo, null, 2);
 	}
-	
 
 	submit.removeAttribute("disabled", "");
 	submit.removeAttribute("aria-busy");
 });
-
-jQuery.get(`ipinfo.io?token=ca07e0f13ded9e`, function (response) {
-	console.log(response);
-}, "json");
 
 
 

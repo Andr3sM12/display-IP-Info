@@ -1,4 +1,5 @@
 
+
 const options = {
 	method: "GET",
 	headers: {
@@ -40,3 +41,12 @@ form.addEventListener("submit", async (event) => {
 	submit.removeAttribute("disabled", "");
 	submit.removeAttribute("aria-busy");
 });
+
+
+jQuery.get("ipinfo.io/json", function (response) {
+	console.log(response);
+}, "json");
+
+
+
+

@@ -1,4 +1,8 @@
 
+
+
+
+
 const options = {
 	method: "GET",
 	headers: {
@@ -22,6 +26,8 @@ const form = $("#form");
 const input = $("#input");
 const submit = $("#submit");
 const results = $("#results");
+const dataClient = $("#dataClient");
+
 
 form.addEventListener("submit", async (event) => {
 	event.preventDefault();
@@ -45,9 +51,15 @@ form.addEventListener("submit", async (event) => {
 
 fetch("https://ipinfo.io/json?token=ca07e0f13ded9e")
 	.then((response) => response.json())
-	.then((jsonResponse) => console.log(jsonResponse.ip, jsonResponse.region, jsonResponse.city, jsonResponse.country ))
-	
-	;
-	
+	.then((jsonResponse) =>
+	dataClient.innerHTML = "Por ejemplo tu IP: " + JSON.stringify(
+			jsonResponse.ip+ " - "+
+			jsonResponse.region+" - "+
+			jsonResponse.city+" - "+
+			jsonResponse.country
+		)
+	);
+
 
 	
+

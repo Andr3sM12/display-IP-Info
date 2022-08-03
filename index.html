@@ -16,25 +16,26 @@
 
 		
 	</head>
+	<link rel="stylesheet" href="style/style.css">
 	<link
 		rel="stylesheet"
 		href="https://unpkg.com/@picocss/pico@latest/css/pico.min.css"
 	/>
 	<body>
+		
 		<main class="container">
 			<form id="form">
 				<label>
-					User IP
-					<input required id="input" type="text" placeholder="Type IP" />
-					<small>Example: 180.45.130.204</small> 
+					Buscador de IP
+					<input required id="input" type="text" placeholder="Escribe aquí una IP" />
+					<small id="dataClient"></small> 
 				</label>
 				<button type="submit" id="submit" >
-					Show IP info
+					Mostrar info de IP
 				</button>
 			</form>
 			<div>
 				<pre id="results">
-
 				</pre>
 			</div>
 		</main>

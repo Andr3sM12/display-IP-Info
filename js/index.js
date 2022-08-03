@@ -1,8 +1,3 @@
-
-
-
-
-
 const options = {
 	method: "GET",
 	headers: {
@@ -28,7 +23,6 @@ const submit = $("#submit");
 const results = $("#results");
 const dataClient = $("#dataClient");
 
-
 form.addEventListener("submit", async (event) => {
 	event.preventDefault();
 	const { value } = input;
@@ -47,19 +41,18 @@ form.addEventListener("submit", async (event) => {
 	submit.removeAttribute("aria-busy");
 });
 
-// Show IP Client
+// Show IP Client as a example
 
 fetch("https://ipinfo.io/json?token=ca07e0f13ded9e")
 	.then((response) => response.json())
-	.then((jsonResponse) =>
-	dataClient.innerHTML = "Por ejemplo tu IP: " + JSON.stringify(
-			jsonResponse.ip+ " - "+
-			jsonResponse.region+" - "+
-			jsonResponse.city+" - "+
-			jsonResponse.country
-		).replace(/"/g, '')
+	.then(
+		(data) =>
+			(dataClient.innerHTML =
+				"Por ejemplo tu IP: " + JSON.stringify(data.ip).replace(/"/g, ""))
 	);
 
+// show data IP Client JSON as results
 
-	
-
+fetch("https://ipinfo.io/json?token=ca07e0f13ded9e")
+	.then((response) => response.json())
+	.then((data) => (results.innerHTML = JSON.stringify(data, null, 2)));

@@ -1,2 +1,11 @@
+html {
+    font-size: 20px;
+}
 
+label {
+    font-size: 23px;
+}
 
+#dataClient {
+    font-size: 23px;
+}

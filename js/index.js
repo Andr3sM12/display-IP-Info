@@ -57,7 +57,7 @@ fetch("https://ipinfo.io/json?token=ca07e0f13ded9e")
 			jsonResponse.region+" - "+
 			jsonResponse.city+" - "+
 			jsonResponse.country
-		)
+		).replace(/"/g, '')
 	);
 
 
